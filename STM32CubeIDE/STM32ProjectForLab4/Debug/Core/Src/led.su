@@ -1,0 +1,5 @@
+../Core/Src/led.c:9:6:BlinkRedLed	8	static
+../Core/Src/led.c:14:6:BlinkYellowLed	8	static
+../Core/Src/led.c:19:6:BlinkGreenLed	8	static
+../Core/Src/led.c:24:6:BlinkBlueLed	8	static
+../Core/Src/led.c:29:6:BlinkOrangeLed	8	static

@@ -1,0 +1,5 @@
+led.c:9:6:BlinkRedLed	1
+led.c:14:6:BlinkYellowLed	1
+led.c:19:6:BlinkGreenLed	1
+led.c:24:6:BlinkBlueLed	1
+led.c:29:6:BlinkOrangeLed	1

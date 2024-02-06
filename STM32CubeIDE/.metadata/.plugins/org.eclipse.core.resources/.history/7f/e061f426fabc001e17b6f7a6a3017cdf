@@ -1,0 +1,15 @@
+/*
+ * led.c
+ *
+ *  Created on: Jan 27, 2024
+ *      Author: Huy
+ */
+#include "led.h"
+
+BLINK_RED_LED_STATUS blink_red_led_status = BLINK_RED_LED_INIT;
+
+void BlinkRedLed(void)
+{
+
+}
+

@@ -52,6 +52,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 STM32ProjectForLab4.list \
 
+OBJCOPY_HEX += \
+STM32ProjectForLab4.hex \
+
 
 # All Target
 all: main-build
@@ -75,12 +78,17 @@ STM32ProjectForLab4.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_D
 	@echo 'Finished building: $@'
 	@echo ' '
 
+STM32ProjectForLab4.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "STM32ProjectForLab4.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) STM32ProjectForLab4.elf STM32ProjectForLab4.list STM32ProjectForLab4.map default.size.stdout
+	-$(RM) STM32ProjectForLab4.elf STM32ProjectForLab4.hex STM32ProjectForLab4.list STM32ProjectForLab4.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

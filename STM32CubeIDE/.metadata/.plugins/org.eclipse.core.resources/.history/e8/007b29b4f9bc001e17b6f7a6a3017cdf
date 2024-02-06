@@ -1,0 +1,20 @@
+/*
+ * led.h
+ *
+ *  Created on: Jan 27, 2024
+ *      Author: Huy
+ */
+
+#ifndef INC_LED_H_
+#define INC_LED_H_
+
+
+typedef enum
+{
+	BLINK_RED_LED_ON,
+	LED_ON,
+	LED_OFF
+}blink_red_led_status;
+
+
+#endif /* INC_LED_H_ */
